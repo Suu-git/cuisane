@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Bao Bao Culinary</title>
+  <link rel="stylesheet" href="/CSS/Style.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-----------------------------------------Header---------------------------------->
+  <div class="Header" clearfix>
+
+    <div class="logo">
+      <a href="/HTML/HomePage/"><img src="/Image/Bao Bao Food.png" alt="Logo"></a>
+      <div class="Search" clearfix>
+        <form>
+          <input type="text" id="SearchBox">
+        </form>
+        <a href="/HTML/Error Page/Error.html"><img src="/Image/Searchicon.png" alt=""></a>
+      </div>
+    </div>
+    <div class="menu" clearfix>
+      <ul clearfix>
+        <div class="menutext">
+          <li><a href='../Homepage/index.html'> Home </a> </li>
+          <li><a href='/HTML/Menu/menu.html'> Menu </a> </li>
+          <li><a href='/HTML/Orders/Orders.html'> Orders</a></li>
+          <li><a href='/HTML/About/About.html'> About </a></li>
+          <li><a href='/HTML/Login/Login.html'>Login</a></li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <!----------------------------------------------------------------------------------------->
+  <div class="Body" clearfix>
+    <div class="Left" clearfix>
+      <h1><strong>COMBO of the week!</strong></h1>
+      <H2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi amet quasi quas at, officia dolorem tenetur,
+        labore deleniti cumque nesciunt quo saepe earum eius facere. Recusandae cum suscipit id distinctio?</H2>
+      <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, ipsum impedit! Voluptate et cum laboriosam
+        velit tenetur odit, consequatur nostrum fugiat corrupti recusandae fugit culpa, debitis consectetur reiciendis
+        delectus obcaecati?
+      </P>
+      <form method="GET" action="/HTML/Error Page/Error.html">
+        <button class="button" type="submit" style="vertical-align:middle"> <span> OrderNow! </span></button>
+      </form>
+    </div>
+    <div class="Topdishes" clearfix>
+      <img class="myFood" src="/Image/ComChienDuongChau.jpg">
+      <img class="myFood" src="/Image/ComTam.jpg">
+      <img class="myFood" src="/Image/macncheese.jpg">
+    </div>
+  </div>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("myFood");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <!----------------------------Footer------------------------------->
+  <div class="footer">
+    <div class="contact">
+      <h3>Contact</h3>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid, officia quisquam autem qui, pariatur
+          magnam nulla quae, illo magni velit repudiandae dolore molestias totam doloribus! Aspernatur fuga nemo fugiat?
+        </li>
+        <li> 206 Nguyen Xi Street, Distric Binh Thanh, HCMC </li>
+        <li> amv@gmail.com </li>
+        <li> 1234567890 </li>
+      </ul>
+    </div>
+    <div class="Link">
+      <ul>
+        <li><a href="../Homepage/index.html">Home</a></li>
+        <li><a href="/HTML/Menu/menu.html">Menu</a></li>
+        <li><a href="/HTML/About/About.html">About Us</a></li>
+        <li><a href="/HTML/Orders/Orders.html">Orders</a></li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------------------------------------------------------->
+</body>
+
+</html>
